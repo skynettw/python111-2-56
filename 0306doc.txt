@@ -1,0 +1,23 @@
+https://104.es
+https://min-huang.com
+https://youtube.com/richardho
+
+Repository Repo. 程式儲存庫
+github.com  <== 註冊一個自己的帳號
+github.com/skynettw
+https://github.com/skynettw/book-mP21926
+
+Anaconda (Python的套件)
+Anaconda Prompt (具有Python環境的命令提示字元)
+
+dir ==> 檢視目前工作目錄下的所有資料夾及檔案(Windows)
+ls  ==> 檢視目前工作目錄下的所有資料夾及檔案(Mac)
+cd \ ==> 把工作目錄切換到根目錄 (磁碟機的最上層)
+md python111-2-56 ==> 在目前的工作目錄下建立一個資料夾
+
+
+git clone <程式儲存庫的網址> ==> 把程式儲存庫複製一份下來本地
+
+Ctrl + C ==> 複製
+Ctrl + V ==> 貼上
+Ctrl + X ==> 剪下
