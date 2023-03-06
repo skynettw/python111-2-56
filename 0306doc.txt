@@ -21,3 +21,5 @@ git clone <程式儲存庫的網址> ==> 把程式儲存庫複製一份下來本
 Ctrl + C ==> 複製
 Ctrl + V ==> 貼上
 Ctrl + X ==> 剪下
+
+https://github.com/skynettw/python111-2-56
