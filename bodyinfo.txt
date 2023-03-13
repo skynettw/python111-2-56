@@ -1,0 +1,5 @@
+Richard,190,60
+Tom,185,65
+Jessica,165,45
+Mary,175,85
+Ana,150,45
