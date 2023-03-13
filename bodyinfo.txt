@@ -3,3 +3,8 @@ Tom,185,65
 Jessica,165,45
 Mary,175,85
 Ana,150,45
+John,165,48
+Alisa,158,75
+Aha,190,102
+Elsa,180,52
+Tommy,174,90
