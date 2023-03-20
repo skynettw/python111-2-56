@@ -1,0 +1,14 @@
+conda create --name nkust1112web56 python=3.10
+conda activate nkust1112web56
+python --version 
+pip list  
+pip install requests
+pip install bs4
+pip install django 
+pip list 
+pip list --format=freeze > requirements.txt
+django-admin startproject nkust1112web56
+cd nkust1112web56
+python manage.py startapp mysite
+python manage.py runserver
+你的網站完成了，可以到瀏覽器上去瀏覽 localhost:8000

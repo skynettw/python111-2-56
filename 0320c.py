@@ -4,6 +4,7 @@ f.close()
 
 data = [item.split(",") for item in rawdata]
 heights = [int(d[1]) for d in data]
+#heights = [int(d['height']) for d in data]  <== 可讀性較高 (字典索引)
 weights = [int(d[2]) for d in data]
 bmis = [ round(int(d[2]) / (int(d[1])/100)**2,2) for d in data]
 '''
