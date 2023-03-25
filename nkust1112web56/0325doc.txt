@@ -1,0 +1,11 @@
+修改 settings.py
+cd nkust1112web56
+執行以下的指令：
+python manage.py makemigrations   <= 建立資料庫遷移檔
+python manage.py migrate          <= 更新資料庫的資料表內容
+python manage.py createsuperuser  <= 建立後台管理員的帳號及密碼
+  ~~在 Linux 作業系統中，輸入密碼時，游標都不會動，這是正常的~~
+python manage.py runserver        <= 啟動測試網站 (localhost:8000)
+  如果要終止測試的話，請按 Ctrl + C
+
+開啟 urls.py  (路由表)，設定首頁程序
