@@ -1,23 +1,10 @@
-"""nkust1112web56 URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
 from mysite import views   # 引入views.py中所有的函式
 
 urlpatterns = [
     path('', views.index),      # 設定執行首頁顯示的功能由index函式負責
+    path('all/', views.all_data),         #顯示所有的站台資訊
+    path('filter/', views.filtered_data), #只顯示超過5台可用自行車的站台資訊
     path('admin/', admin.site.urls),
 ]
