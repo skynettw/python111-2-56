@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests, json
 from mysite import models           # 匯入 mysite 資料夾底下 models.py 中所有的類別
+import random   #匯入亂數模組
 
 def index(request):
-    myname = "金城武"
+    mynames = ["楠梓金城武", "花美男", "高科邊緣人", "高雄獨行俠"]
+    myname = random.choice(mynames)     #從mynames串列中隨機取出其中一個資料項目
     return render(request, "index.html", locals())
 
 def all_data(request):
