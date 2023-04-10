@@ -42,3 +42,7 @@ def filtered_data(request):
     # 從資料表裡面過濾出我們想要的資料
     data = models.HBicycleData.objects.filter(sbi__gte=10)
     return render(request, "filter.html", locals())
+
+def nkustnews(request):
+    data = models.NKUSTnews.objects.all()
+    return render(request, "nkustnews.html", locals())
