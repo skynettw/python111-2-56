@@ -7,7 +7,21 @@
 {% endblock %}
 
 {% block content %}
-  {% for item in data %}
-          {{ item.sna }}:{{ item.sbi }}/{{ item.tot }} <br>
-  {% endfor %}
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col">
+      <table class="table talbe-striped table-hover">
+        <tr><td>站名</td><td>可用的台數</td><td>全部的台數</td></tr>
+      {% for item in data %}
+        <tr>
+          <td>{{ item.sna }}</td><td>{{ item.sbi }}</td><td>{{ item.tot }} </td>
+        </tr>         
+      {% endfor %}
+    </table>
+    </div>
+    <div class="col-2">
+
+    </div>
+</div>
 {% endblock %}

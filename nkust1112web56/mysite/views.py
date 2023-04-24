@@ -46,3 +46,7 @@ def filtered_data(request):
 def nkustnews(request):
     data = models.NKUSTnews.objects.all()
     return render(request, "nkustnews.html", locals())
+
+def phonelist(request):
+    data = models.PhoneModel.objects.all()
+    return render(request, "phonelist.html", locals())

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}敏煌的網站{% endblock %}
+
+{% block headmessage %}
+<h2>新款手機列表</h2>
+{% endblock %}
+
+{% block content %}
+<table class="table table-striped table-dark">
+    <tr><td>品名</td><td>價格</td><td>製造商</td><td>生產國</td></tr>
+    {% for item in data %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>
+                <a href="/phonelist/maker/{{item.maker.id}}/">{{item.maker.name}}</a>
+            </td>
+            <td>
+                <a href="/phonelist/country/{{item.maker.id}}/">{{item.maker.country}}</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
