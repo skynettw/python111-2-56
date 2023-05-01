@@ -47,6 +47,14 @@ def nkustnews(request):
     data = models.NKUSTnews.objects.all()
     return render(request, "nkustnews.html", locals())
 
-def phonelist(request):
-    data = models.PhoneModel.objects.all()
+def phonelist(request, id=-1):
+    if id==-1:
+        data = models.PhoneModel.objects.all()
+    else:
+        maker = models.PhoneMaker.objects.get(id=id)         #找一個用get
+        data = models.PhoneModel.objects.filter(maker=maker) #找好多個，用filter
     return render(request, "phonelist.html", locals())
+
+def chart(request):
+    data = models.PhoneModel.objects.all()
+    return render(request, "chart.html", locals())

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}敏煌的網站{% endblock %}
+
+{% block headmessage %}
+<h2>手機價格比較圖表</h2>
+{% endblock %}
+
+{% block content %}
+<div>
+    <canvas id="myChart" width="800" height="300"></canvas>
+  </div>
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+        {% for item in data %}
+           '{{item.name}}',    
+        {% endfor %}
+        ],
+        datasets: [{
+          label: '手機價格（台幣）',
+          data: [
+          {% for item in data %}
+           {{item.price}},    
+        {% endfor %}
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+{% endblock %}
