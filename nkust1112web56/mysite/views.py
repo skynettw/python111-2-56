@@ -58,3 +58,8 @@ def phonelist(request, id=-1):
 def chart(request):
     data = models.PhoneModel.objects.all()
     return render(request, "chart.html", locals())
+
+def stock300list(request):
+    data = models.StockInfo.objects.filter(price__gte=300).order_by('-price')
+    numbers = len(data)
+    return render(request, "stocklist.html", locals())

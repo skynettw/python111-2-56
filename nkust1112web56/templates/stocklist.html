@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}敏煌的網站{% endblock %}
+
+{% block headmessage %}
+<h2>股票資料列表</h2>
+{% endblock %}
+
+{% block content %}
+總共有{{ numbers }}公司符合條件
+<table class="table table-striped table-dark">
+    <tr><td>排名</td><td>代號</td><td>公司名稱</td><td>收盤價</td><td>月平均價</td></tr>
+    {% for item in data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{item.code}}</td>
+            <td>{{item.name}}</td>
+            <td>
+                {{item.price}}
+            </td>
+            <td>
+                {{item.mprice}}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

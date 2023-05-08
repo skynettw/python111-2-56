@@ -31,3 +31,12 @@ class PhoneModel(models.Model):
 
     class Meta:
         ordering = ["-price"]
+
+class StockInfo(models.Model):
+    code = models.CharField(max_length=10)
+    name = models.CharField(max_length=100)
+    price = models.FloatField()
+    mprice = models.FloatField()
+
+    def __str__(self):
+        return self.name
